@@ -1,0 +1,4 @@
+__config()->{
+    'scope'->'global';
+};
+
