@@ -9,3 +9,5 @@ __config() -> {
     ],
 };
 
+config_data = read_file('entity_blacklist','shared_json');
+print(config_data)
