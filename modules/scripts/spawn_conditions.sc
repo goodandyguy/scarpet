@@ -2,8 +2,8 @@ __config() -> {
     'scope' -> 'global',
     'resources' -> [
         {
-            'source' -> '/configs/entity_blacklist.json',
-            'target' -> 'entity_blacklist.json',
+            'source' -> '/configs/spawn_conditions.json',
+            'target' -> 'spawn_conditions.json',
             'shared' -> true,
         },
     ],
