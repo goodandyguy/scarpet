@@ -7,8 +7,8 @@ __config() -> {
             'shared' -> true,
         },
         {
-            'source' -> '/README/spawn_conditions.readme',
-            'target' -> 'README/spawn_conditions.readme',
+            'source' -> '/README/spawn_conditions.md',
+            'target' -> 'README/spawn_conditions.md',
             'shared' -> true,
         },
     ],
