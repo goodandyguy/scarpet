@@ -6,6 +6,11 @@ __config() -> {
             'target' -> 'spawn_conditions.json',
             'shared' -> true,
         },
+        {
+            'source' -> '/README/spawn_conditions.readme',
+            'target' -> 'README/spawn_conditions.readme',
+            'shared' -> true,
+        },
     ],
 };
 
