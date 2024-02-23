@@ -1,12 +1,12 @@
 {
-  "-global":false,
-  "#":{
+  "#": {
     
   },
-  "minecraft":{
+  "-global": false,
+  "minecraft": {
     
   },
-  "naturalist":{
+  "naturalist": {
     
   }
 }
