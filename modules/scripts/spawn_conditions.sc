@@ -55,9 +55,6 @@ spec_cond = {
         if(maxn==null,maxn=[big,big,big]);
         return(epos:0<=maxn:0&&epos:0>minn:0&&epos:1<=maxn:1&&epos:1>minn:1&&epos:2<=maxn:2&&epos:2>minn:2);
     ),
-    'spawn'->_(_e,val)->(
-        return(true);
-    ),
 };
 
 entity_load_handler('*',_(e,new,outer(config_data),outer(spec_cond))->
