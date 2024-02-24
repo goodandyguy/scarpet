@@ -28,26 +28,31 @@ You can add more and remove namespaces from the config, just make sure you write
 
 ## Adding entities:
 To add an entity into the list, simply type in the entity's name in the correct namespace, followed by : and a list of conditions or true/false.
-**Make sure you allow for the player entity in minecraft namespace to spawn if you disable all entities!**
+**Make sure you allow for the player entity in minecraft namespace to spawn if you disable all entities!** 
+
 Eg. "zombie": false - disables zombies from spawning altogether.
 
 ## Adding tags:
 To add a tag, select the namespace you want to be affected by the condition, type in the valid tag, and the conditions or true/false.
 Eg.
+
 "#living": {"day_time": [0,12000], "spawn": true} - makes all living entities (anything that's not like armorstands, snowballs, items) spawn only during daytime.
 
 ## "-global" property:
 Setting this to true makes the Main script copy the config's values to be used in other worlds *ONLY DURING THE SAME SESSION*,
 if you quit Minecraft, the config values won't be replicated to other worlds, so it's best to write the configs into the
 config file and the copy them into the Main script.
+
 Note that the config files will save for the worlds that you entered during the same session!
 
 ## "-tick_loaded" & "-tag_loaded" properties:
 These two properties control how entities are preserved in your world. These properties can be put inside of the conditions list, of tags or individual entities,
 it even works in global tags! *When used inside of conditions **DO NOT ADD - infront!***.
+
 -tick_loaded will determine whether entities that were allowed to load in, should tick. This means running the check for the entity every tick (approx. 0.05 seconds).
 Setting -tick_loaded to true would mean that if you are next to an entity that was allowed to spawn, but the condition has changed eg. time of day for condition no longer
 matches, the entity would just despawn right in-front of you.
+
 -tag_loaded will determine whether entities that were spawned in should **EVER** check for the condition again.
 If you set -tag_loaded to true, any entity that loads in, will always only despawn according to the game and not the module.
 If -tag_loaded is false, entities will be despawned as soon as they attempt to be reloaded, eg. you leave the game and rejoin, or you walk too far away from the entity.
@@ -75,10 +80,12 @@ depending on the "spawn" property in the conditions list.
 
 ## Tags:
 Tags are extra descriptors that allow you to select groups of entities or very specific entities.
+
 When in the global "#" list, they do not require # to be added to front of the tag (and won't work if "#" is added).
+
 When in any other namespace, tags require there to be # infront of the tag, to define that it is a tag.
 
-Available tags:
+### Available tags:
 - "*" - Refers to everything.
 - valid - Any entity with health > 0
 - living - Living entities, anything that isn't armorstands, projectiles, items, etc.
