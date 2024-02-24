@@ -30,7 +30,7 @@ You can add more and remove namespaces from the config, just make sure you write
 To add an entity into the list, simply type in the entity's name in the correct namespace, followed by : and a list of conditions or true/false.
 **Make sure you allow for the player entity in minecraft namespace to spawn if you disable all entities!** 
 
-Eg. "zombie": false - disables zombies from spawning altogether.
+Eg. `"zombie": false` - disables zombies from spawning altogether.
 
 ## Adding tags:
 To add a tag, select the namespace you want to be affected by the condition, type in the valid tag, and the conditions or true/false.
