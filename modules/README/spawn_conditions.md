@@ -36,7 +36,10 @@ Eg. "zombie": false - disables zombies from spawning altogether.
 To add a tag, select the namespace you want to be affected by the condition, type in the valid tag, and the conditions or true/false.
 Eg.
 
-"#living": {"day_time": [0,12000], "spawn": true} - makes all living entities (anything that's not like armorstands, snowballs, items) spawn only during daytime.
+```json
+"#living": {"day_time": [0,12000], "spawn": true}
+```
+- makes all living entities (anything that's not like armorstands, snowballs, items) spawn only during daytime.
 
 ## "-global" property:
 Setting this to true makes the Main script copy the config's values to be used in other worlds *ONLY DURING THE SAME SESSION*,
