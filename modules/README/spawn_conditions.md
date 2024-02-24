@@ -44,7 +44,7 @@ Eg.
 ## "-global" property:
 Setting this to true makes the Main script copy the config's values to be used in other worlds *ONLY DURING THE SAME SESSION*,
 if you quit Minecraft, the config values won't be replicated to other worlds, so it's best to write the configs into the
-config file and the copy them into the Main script.
+config file and then copy them into the Main script.
 
 Note that the config files will save for the worlds that you entered during the same session!
 
@@ -59,12 +59,30 @@ matches, the entity would just despawn right in-front of you.
 -tag_loaded will determine whether entities that were spawned in should **EVER** check for the condition again.
 If you set -tag_loaded to true, any entity that loads in, will always only despawn according to the game and not the module.
 If -tag_loaded is false, entities will be despawned as soon as they attempt to be reloaded, eg. you leave the game and rejoin, or you walk too far away from the entity.
--tag_loaded will also make it so the entity will not perform the condition check, acting on behalf of -tick_loaded!
+-tag_loaded will also make it so the entity will not perform the condition check every tick, acting on behalf of -tick_loaded!
 You would likely want to set tag_loaded to true for wolves or such tameable creatures.
 
 ## "#" - global tags:
 Inside of the "#" section, you can type in ONLY tags (written at the bottom of this file). The tags you type into this section
 should NOT have # infront of the tag. These tags will apply to EVERY namespace.
+
+Note that any vanilla tags do not require the namespace infront of the tag, whilst modded tags do require it.
+❌**WRONG**❌
+```json
+"minecraft:living":true
+```
+✔️**CORRECT**✔️
+```json
+"living":true
+```
+❌**WRONG**❌
+```json
+"lion_hostiles":true
+```
+✔️**CORRECT**✔️
+```json
+"naturalist:lion_hostiles":true
+```
 
 ## Conditions:
 Conditions are lists of conditions that all need to be true for the entity to either spawn or not spawn,
@@ -113,3 +131,8 @@ When in any other namespace, tags require there to be # infront of the tag, to d
 - impact_projectiles - Anything that can be launched and can land, eg. snowballs, eggs, arrows.
 
 There are lots more tags that you can use, too many to list and many mods add their own tags, so I suggest you look into those.
+## How to get tags:
+To get a tag for a specific entity:
+- Make sure have cheats enabled (may not work otherwise)
+- Look at the entity which tags you want to get
+- Type in the chat /data_getter_helper, this will automatically fetch all tags, categories and other things you can use in the tags for that entity.
