@@ -62,7 +62,7 @@ When in the global "#" list, they do not require # to be added to front of the t
 When in any other namespace, tags require there to be # infront of the tag.
 
 Available tags:
-* - Refers to everything.
+"*" - Refers to everything.
 valid - Any entity with health > 0
 living - Living entities, anything that isn't armorstands, projectiles, items, etc.
 projectile - Arrows, snowballs, eggs, anything that sort.
