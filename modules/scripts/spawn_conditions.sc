@@ -63,6 +63,9 @@ spec_cond = {
 entity_load_handler('*',_(e,new,outer(config_data),outer(spec_cond))->
     entity_event(e, 'on_tick', _(e,outer(config_data),outer(spec_cond)) ->
         (
+            if(query(e,'has_scoreboard_tag','spc_nounload'),entity_event(e, 'on_tick',null);return());
+            til = config_data:'-tick_loaded';
+            tal = config_data:'-tag_loaded';
             spl = split(':',query(e,'type'));
             namespace = spl:0;
             e_type = spl:1;
@@ -93,6 +96,12 @@ entity_load_handler('*',_(e,new,outer(config_data),outer(spec_cond))->
                 gsbot = gtgd:'spawn';
                 for(gtgd,
                     (
+                        if(_=='tick_loaded',(
+                            til = gtgd:_;
+                        ),_=='tag_loaded',(
+                            tal = gtgd:_;
+                        ));
+                        if(spec_cond:_==null,continue());
                         gspt = call(spec_cond:_,e,gtgd:_);
                         if(gspt==false,gsbot= !gsbot;break());
                     );
@@ -103,6 +112,12 @@ entity_load_handler('*',_(e,new,outer(config_data),outer(spec_cond))->
                 nssbot = nstgd:'spawn';
                 for(nstgd,
                     (
+                        if(_=='tick_loaded',(
+                            til = nstgd:_;
+                        ),_=='tag_loaded',(
+                            tal = nstgd:_;
+                        ));
+                        if(spec_cond:_==null,continue());
                         nsspt = call(spec_cond:_,e,nstgd:_);
                         if(nsspt==false,nssbot= !nssbot;break());
                     );
@@ -113,11 +128,18 @@ entity_load_handler('*',_(e,new,outer(config_data),outer(spec_cond))->
                 esbot = nsdat:'spawn';
                 for(nsdat,
                     (
+                        if(_=='tick_loaded',(
+                            til = nsdat:_;
+                        ),_=='tag_loaded',(
+                            tal = nsdat:_;
+                        ));
+                        if(spec_cond:_==null,continue());
                         espt = call(spec_cond:_,e,nsdat:_);
                         if(espt==false,esbot= !esbot;break());
                     );
                 );
             );
+            if(tal,(modify(e,'tag','spc_nounload');));
             // Final spawn based on tag values; esbot, nssbot, gsbot, for entity, namespace and global respectively
             nodata = (gsbot==null&&nssbot==null&&esbot==null);
             // Order of importance;
@@ -125,6 +147,7 @@ entity_load_handler('*',_(e,new,outer(config_data),outer(spec_cond))->
             if(!shall_spawn,
                 modify(e, 'remove');
             );
+            if(!til,entity_event(e, 'on_tick',null));
             return();
         )
     );
