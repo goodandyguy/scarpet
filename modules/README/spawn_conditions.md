@@ -67,6 +67,7 @@ Inside of the "#" section, you can type in ONLY tags (written at the bottom of t
 should NOT have # infront of the tag. These tags will apply to EVERY namespace.
 
 Note that any vanilla tags do not require the namespace infront of the tag, whilst modded tags do require it.
+
 ❌**WRONG**❌
 ```json
 "minecraft:living":true
