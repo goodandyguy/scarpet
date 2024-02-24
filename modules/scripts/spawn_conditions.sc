@@ -12,6 +12,11 @@ __config() -> {
             'shared' -> true,
         },
     ],
+    'libraries' -> [
+        {
+            'source' -> '/scripts/data_getter_helper.sc',
+        },
+    ],
 };
 
 config_data = read_file('spawn_conditions','shared_json');
