@@ -1,6 +1,7 @@
 This file will teach you how to configure the spawn_conditions module. You might be me but you'll still need this.
 
 The default config looks like this:
+```json
 {
   "-tick_loaded": false,
   "-tag_loaded": true,
@@ -15,6 +16,7 @@ The default config looks like this:
     
   }
 }
+```
 
 ## Namespaces:
 "minecraft" and "naturalist" are namespaces, these are usually mod names, you can find out the namespaces ingame by
