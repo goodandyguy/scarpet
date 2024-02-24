@@ -37,7 +37,7 @@ if you quit Minecraft, the config values won't be replicated to other worlds, so
 config file and the copy them into the Main script.
 Note that the config files will save for the worlds that you entered during the same session!
 
-"#" - global tags:
+## "#" - global tags:
 Inside of the "#" section, you can type in ONLY tags (written at the bottom of this file). The tags you type into this section
 should NOT have # infront of the tag. These tags will apply to EVERY namespace.
 
@@ -46,14 +46,14 @@ Conditions are lists of conditions that all need to be true for the entity to ei
 depending on the "spawn" property in the conditions list.
 
 Currently valid conditions are:
-dimension : ["the_nether","the_end"] - it's a comma (,) separated list of EXACT dimension names, modded dimensions require a namespace
-day_time : [0,24000] - a list of 2 numbers indicating day time in ticks when the entity can/can't spawn.
-Note: For some conditions, a max value is not required and will be assumed to be the absolute highest value it can be.
-x : [min,max] - a list of 2 x coordinates where the entity can/can't spawn.
-y : [min,max] - a list of 2 y coordinates where the entity can/can't spawn. Can be used to make mobs only spawn underground for example.
-z : [min,max] - a list of 2 z coordinates where the entity can/can't spawn.
-area : [[min_x,min_y,min_z],[max_x,max_y,max_z]] - a list of 2 lists, which contain minimum and maximum coordinates where the entity can/can't spawn.
-spawn : true/false - REQUIRED, will determine if the entity will spawn when the conditions are true or when the conditions are false.
+- dimension : ["the_nether","the_end"] - it's a comma (,) separated list of EXACT dimension names, modded dimensions require a namespace
+- day_time : [0,24000] - a list of 2 numbers indicating day time in ticks when the entity can/can't spawn.
+*Note: For some conditions, a max value is not required and will be assumed to be the absolute highest value it can be.*
+- x : [min,max] - a list of 2 x coordinates where the entity can/can't spawn.
+- y : [min,max] - a list of 2 y coordinates where the entity can/can't spawn. Can be used to make mobs only spawn underground for example.
+- z : [min,max] - a list of 2 z coordinates where the entity can/can't spawn.
+- area : [[min_x,min_y,min_z],[max_x,max_y,max_z]] - a list of 2 lists, which contain minimum and maximum coordinates where the entity can/can't spawn.
+- spawn : true/false - REQUIRED, will determine if the entity will spawn when the conditions are true or when the conditions are false.
 
 
 Tags:
