@@ -62,27 +62,27 @@ When in the global "#" list, they do not require # to be added to front of the t
 When in any other namespace, tags require there to be # infront of the tag.
 
 Available tags:
-"*" - Refers to everything.
-valid - Any entity with health > 0
-living - Living entities, anything that isn't armorstands, projectiles, items, etc.
-projectile - Arrows, snowballs, eggs, anything that sort.
-minecarts - All minecarts.
-undead - Zombies, skeletons, drowneds, etc.
-arthropod - Spiders, bees, silverfish, etc.
-aquatic - All fish, turtles, squids.
-regular - Many entities that don't belong to undead, arthropod, aquatic, or illager.
-illager - Illager types, vindicators, evokers, witches, ravagers etc.
-monster - Monsters category, zombies, creepers, spiders, anything that prevents you from sleeping.
-creature - Normal creatures like pigs, cows, sheep, zombie horses, etc.
-ambient - Bat... and some modded entities.
-water_creature - Dolphins & squid. NOT GLOW SQUID!
-water_ambient - Fish
-misc - A lot of weird things, villagers, iron/snow-golems, fishing-bobbers, snowballs, etc.
+- "*" - Refers to everything.
+- valid - Any entity with health > 0
+- living - Living entities, anything that isn't armorstands, projectiles, items, etc.
+- projectile - Arrows, snowballs, eggs, anything that sort.
+- minecarts - All minecarts.
+- undead - Zombies, skeletons, drowneds, etc.
+- arthropod - Spiders, bees, silverfish, etc.
+- aquatic - All fish, turtles, squids.
+- regular - Many entities that don't belong to undead, arthropod, aquatic, or illager.
+- illager - Illager types, vindicators, evokers, witches, ravagers etc.
+- monster - Monsters category, zombies, creepers, spiders, anything that prevents you from sleeping.
+- creature - Normal creatures like pigs, cows, sheep, zombie horses, etc.
+- ambient - Bat... and some modded entities.
+- water_creature - Dolphins & squid. NOT GLOW SQUID!
+- water_ambient - Fish
+- misc - A lot of weird things, villagers, iron/snow-golems, fishing-bobbers, snowballs, etc.
 
-skeletons - Skeleton types
-raiders - Raider types
-beehive_inhabitors - I don't know why this exists, it's bees.
-arrows - All arrows
-impact_projectiles - Anything that can be launched and can land, eg. snowballs, eggs, arrows.
+- skeletons - Skeleton types
+- raiders - Raider types
+- beehive_inhabitors - I don't know why this exists, it's bees.
+- arrows - All arrows
+- impact_projectiles - Anything that can be launched and can land, eg. snowballs, eggs, arrows.
 
 There are lots more tags that you can use, too many to list and many mods add their own tags, so I suggest you look into those.
